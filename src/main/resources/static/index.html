@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling av kinobilettter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="index.js"></script>
+</head>
+<body>
+<h1> Et system for bestilling av kinobiletter</h1>
+
+<table class="table">
+    <tr>
+        <td><label for="film">Velg Film:</label></td>
+        <td><select id="film" class="form-control">
+            <option value="oppenheimer">Oppenheimer</option>
+            <option value="barbie">Barbie</option>
+            <option value="cars">Cars</option>
+            <option value="karatekid">Karatekid</option>
+            <option value="ip-man">Ip-man</option>
+        </select></td>
+        <td class="feil" id="filmFeilmelding"></td>
+    </tr>
+
+    <tr>
+        <td><label for="antall"> Antall billetter: </label></td>
+        <td><input type="number" class="form-control" id="antall" name="antall" ></td>
+        <td id="antallFeilmelding"></td>
+    </tr>
+    <tr>
+        <td><label for="fornavn"> Fornavn</label></td>
+        <td><input type="text" class="form-control" id="fornavn" name="fornavn"></td>
+        <td id="fornavnFeilmelding"></td>
+    </tr>
+    <tr>
+        <td><label for="etternavn"> Etternavn</label></td>
+        <td><input type="text" class="form-control" id="etternavn" name="etternavn"></td>
+        <td id="etternavnFeilmelding"></td>
+    </tr>
+    <tr>
+        <td><label for="telefonnr"> Telefonnr</label></td>
+        <td><input type="text" class="form-control" id="telefonnr" name="telefonnr"></td>
+        <td id="telefonnrFeilmelding"></td>
+    </tr>
+    <tr>
+        <td><label for="epost">Epost</label></td>
+        <td><input type="epost" class="form-control" id="epost" name="epost"> </td>
+        <td id="epostFeilmelding"> </td>
+    </tr>
+</table>
+
+<br><br>
+
+<button class="btn btn-primary" id="slett" onclick="registrerBillett()"> Kjøp billett</button> <br>
+
+<h2> Alle billetter</h2>
+<table class="table table-striped" id="billetter"></table>
+
+<button class="btn btn-danger" onclick="clearAll()"> Slett alle billettene</button>
+
+</body>
+</html>
